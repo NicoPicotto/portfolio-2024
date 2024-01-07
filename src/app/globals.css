@@ -25,12 +25,12 @@ h1 {
 
 h2 {
 	font-weight: 700;
-	font-size: larger;
+	font-size: x-large;
 }
 
 h3 {
 	font-weight: 700;
-	font-size: large;
+	font-size: larger;
 }
 
 p {
@@ -38,14 +38,18 @@ p {
 	font-size: large;
 }
 
-li {
+label {
 	font-weight: 400;
-	font-size: large;
+	font-size: medium;
+	margin-bottom: 5px;
+	color: var(--brand-3);
 }
 
 li {
 	display: flex;
 	align-items: center;
+	font-weight: 400;
+	font-size: large;
 }
 
 section {
@@ -55,7 +59,21 @@ section {
 	margin-right: auto;
 	max-width: 1024px;
 	align-items: center;
-	padding-top: 5rem /* 80px */;
-	padding-bottom: 5rem /* 80px */;
-	height: 70vh;
+	padding-block: 10em;
+}
+
+input,
+textarea {
+	border-radius: 4px;
+	padding-inline: 8px;
+	padding-block: 6px;
+	font-size: large;
+	margin-bottom: 20px;
+	background-color: var(--brand-1);
+	transition: ease;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+	background-color: var(--brand-1);
 }

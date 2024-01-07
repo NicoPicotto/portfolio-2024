@@ -4,6 +4,8 @@ import Hero from '@/app/Components/Hero/Hero';
 import TechSkills from '@/app/Components/TechSkills/TechSkills';
 import Lenis from '@studio-freight/lenis';
 import Projects from './Components/Projects/Projects';
+import Contact from './Components/Contact/Contact';
+import Footer from './Components/Footer/Footer';
 
 export default function Home() {
 	useEffect(() => {
@@ -22,6 +24,7 @@ export default function Home() {
 			<Hero />
 			<TechSkills />
 			<Projects />
+			<Contact />
 		</main>
 	);
 }

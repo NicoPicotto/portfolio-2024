@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonLink from '../Buttons/ButtonLink';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
 	return (
@@ -21,7 +22,7 @@ const Navbar = () => {
 					</svg>
 					Nico Picotto
 				</ButtonLink>
-				<div className='flex space-x-8'>
+				<div className='flex space-x-8 items-center'>
 					<ButtonLink targetId='skills'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -43,7 +44,7 @@ const Navbar = () => {
 						</svg>
 						Tech Skills
 					</ButtonLink>
-					<ButtonLink>
+					<ButtonLink targetId='projects'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
@@ -54,7 +55,7 @@ const Navbar = () => {
 						</svg>
 						Projects
 					</ButtonLink>
-					<ButtonLink>
+					<ButtonLink targetId='contact'>
 						{' '}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -67,6 +68,15 @@ const Navbar = () => {
 						</svg>
 						Contact
 					</ButtonLink>
+					<div className='h-full border border-[var(--brand-2)]'></div>
+					<div className='flex gap-4'>
+						<a href='#' target='_blank'>
+							<FaGithub />
+						</a>
+						<a href='#' target='_blank'>
+							<FaLinkedin />
+						</a>
+					</div>
 				</div>
 			</div>
 		</header>

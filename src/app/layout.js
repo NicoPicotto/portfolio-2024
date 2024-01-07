@@ -1,6 +1,7 @@
 import { Exo } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/app/Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
 
 const exo = Exo({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
 			<body className={exo.className}>
 				<Navbar />
 				<div className='mx-auto max-w-screen-xl px-6 '>{children}</div>
+				<Footer />
 			</body>
 		</html>
 	);
