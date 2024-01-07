@@ -1,12 +1,11 @@
 import React from 'react';
-import ButtonGhost from '../Buttons/ButtonGhost';
 import ButtonLink from '../Buttons/ButtonLink';
 
 const Navbar = () => {
 	return (
-		<header className='flex justify-center'>
-			<div className='max-w-screen-xl flex justify-between w-full py-8 px-4'>
-				<ButtonLink>
+		<header className='flex justify-center sticky top-0 bg-[var(--background)]'>
+			<div className='max-w-screen-xl flex justify-between w-full py-8 px-6'>
+				<ButtonLink targetId='hero'>
 					{' '}
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -23,7 +22,7 @@ const Navbar = () => {
 					Nico Picotto
 				</ButtonLink>
 				<div className='flex space-x-8'>
-					<ButtonLink>
+					<ButtonLink targetId='skills'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
@@ -69,20 +68,6 @@ const Navbar = () => {
 						Contact
 					</ButtonLink>
 				</div>
-				{/* <ButtonGhost>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						viewBox='0 0 24 24'
-						fill='currentColor'
-						className='w-7 h-7'
-					>
-						<path
-							fillRule='evenodd'
-							d='M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z'
-							clipRule='evenodd'
-						/>
-					</svg>
-				</ButtonGhost> */}
 			</div>
 		</header>
 	);
