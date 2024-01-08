@@ -23,7 +23,7 @@ const Card = ({ project }) => {
 				<h2>{project.name}</h2>
 				<p className='text-[var(--brand-3)]'>{project.content}</p>
 			</div>
-			<div className='flex-1 flex border-t border-t-[var(--brand-2)]'>
+			<div className='flex-1 flex border-t-2 border-t-[var(--brand-2)]'>
 				<ButtonGhost className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)]'>
 					<FaGithub color='var(--accent-1)' />
 					Code on Github

@@ -3,7 +3,7 @@ import ButtonSolid from '../Buttons/ButtonSolid';
 
 const Contact = () => {
 	return (
-		<section id='contact' className='pb-20 mb-10'>
+		<section id='contact' className='pb-20 mb-20'>
 			<div className='flex-1 divide-y divide-[var(--brand-2)] space-y-2'>
 				<h1>
 					Get in <span className='text-[var(--accent-1)]'>touch</span>.
@@ -21,7 +21,7 @@ const Contact = () => {
 					</div>
 					<div className='w-full flex flex-col'>
 						<label>Message</label>
-						<textarea />
+						<textarea placeholder="I would like to talk about my new website ideas!"/>
 					</div>
 					<div>
 						<ButtonSolid>Submit</ButtonSolid>

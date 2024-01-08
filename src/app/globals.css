@@ -15,7 +15,15 @@
 
 body {
 	color: var(--neutral);
-	background: var(--background);
+	background-color: #122738;
+	opacity: 1;
+	background-image: radial-gradient(
+			#1c3e58 0.9500000000000001px,
+			transparent 0.9500000000000001px
+		),
+		radial-gradient(#1c3e58 0.9500000000000001px, #122738 0.9500000000000001px);
+	background-size: 38px 38px;
+	background-position: 0 0, 19px 19px;
 }
 
 h1 {
@@ -73,7 +81,8 @@ textarea {
 	transition: ease;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
 	outline: none;
 	background-color: var(--brand-1);
 }
