@@ -1,4 +1,3 @@
-import React from 'react';
 import ButtonSolid from '../Buttons/ButtonSolid';
 
 const Contact = () => {
@@ -11,20 +10,23 @@ const Contact = () => {
 				<form className='flex flex-col pt-3 w-full'>
 					<div className='flex w-full gap-4'>
 						<div className='w-full flex flex-col'>
-							<label>Name</label>
+							<label required>Name</label>
 							<input type='text' placeholder='John Doe' />
 						</div>
 						<div className='w-full flex flex-col'>
 							<label>Email</label>
-							<input placeholder='jdoe@gmail.com' />
+							<input required placeholder='jdoe@gmail.com' />
 						</div>
 					</div>
 					<div className='w-full flex flex-col'>
 						<label>Message</label>
-						<textarea placeholder="I would like to talk about my new website ideas!"/>
+						<textarea
+							required
+							placeholder='I would like to talk about my new website ideas!'
+						/>
 					</div>
 					<div>
-						<ButtonSolid>Submit</ButtonSolid>
+						<ButtonSolid type='submit'>Submit</ButtonSolid>
 					</div>
 				</form>
 			</div>

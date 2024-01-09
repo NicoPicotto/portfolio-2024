@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
 	return (
-		<header className='flex justify-center sticky top-0 bg-[var(--background)]'>
+		<header className='flex justify-center sticky top-0 bg-[var(--background)] z-10'>
 			<div className='max-w-screen-xl flex justify-between w-full py-8 px-6'>
 				<ButtonLink targetId='hero'>
 					{' '}
@@ -70,10 +70,10 @@ const Navbar = () => {
 					</ButtonLink>
 					<div className='h-full border border-[var(--brand-2)]'></div>
 					<div className='flex gap-4'>
-						<a href='#' target='_blank'>
+						<a href='https://github.com/NicoPicotto' target='_blank'>
 							<FaGithub />
 						</a>
-						<a href='#' target='_blank'>
+						<a href='https://linkedin.com/in/nicolaspicotto/' target='_blank'>
 							<FaLinkedin />
 						</a>
 					</div>

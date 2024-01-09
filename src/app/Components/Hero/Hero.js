@@ -28,6 +28,7 @@ const Hero = () => {
 					alt='Descripción de la imagen'
 					width='350'
 					height='350'
+					priority
 					className='relative grayscale hover:grayscale-0 transition-all'
 				/>
 			</div>
