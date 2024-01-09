@@ -1,27 +1,43 @@
-import { EmailTemplate } from '@/app/Components/EmailTemplate/EmailTemplate';
-import { NextRequest, NextResponse } from 'next/server';
+// import { EmailTemplate } from '@/app/Components/EmailTemplate/EmailTemplate';
+// import { NextResponse } from 'next/server';
+// import { Resend } from 'resend';
+
+// const resend = new Resend('re_F9HpHcZt_A9APPeUWthem6TFfZ5y2nrD4');
+
+// export async function POST() {
+// 	try {
+// 		const data = await resend.emails.send({
+// 			from: 'onboarding@resend.dev',
+// 			to: ['picottonico@gmail.com'],
+// 			subject: 'Hello world',
+// 			react: EmailTemplate({ name, email, message }),
+// 		});
+// 		return NextResponse.json({"Hello" : "world"});
+// 	} catch (error) {
+// 		return NextResponse.json({ error });
+// 	}
+// }
+
+import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { EmailTemplate } from '@/app/Components/EmailTemplate/EmailTemplate';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend('re_F9HpHcZt_A9APPeUWthem6TFfZ5y2nrD4');
 
-export async function POST() {
+export async function GET() {
 	try {
-		const body = await NextRequest.json();
-		console.log(body);
-		const { email, name, message } = body;
-		const data = await resend.emails.send({
-			from: 'Nico Website <info@nicopicotto.dev>',
-			to: ['picottonico@gmail.com'],
-			subject: 'New message from website!',
-			react: EmailTemplate({ email, name, message }),
+		const { data } = await resend.emails.send({
+			from: 'no-reply@nicopicotto.dev',
+			to: 'picottonico@gmail.com',
+			subject: 'New message from your website!',
+			react: EmailTemplate({
+				name: 'Nico',
+				email: 'zalala@gmail.com',
+				message: 'alalalalong',
+			}),
 		});
-
-		if(data.status === "success") {
-			return NextResponse.json({message: "Message successfully sent!"})
-		}
-
-		return NextResponse.json(data);
+		return new NextResponse(data);
 	} catch (error) {
-		return NextResponse.json({ error });
+		return new NextResponse(error);
 	}
 }

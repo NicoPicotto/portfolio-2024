@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import ButtonSolid from '../Buttons/ButtonSolid';
+import { EmailTemplate } from '../EmailTemplate/EmailTemplate';
+import { Resend } from 'resend';
+import { NextResponse } from 'next/server';
 
 const Contact = () => {
 	const [data, setData] = useState({
@@ -9,25 +12,30 @@ const Contact = () => {
 	});
 	const [responseMsg, setResponseMsg] = useState('');
 
+	const resend = new Resend('re_F9HpHcZt_A9APPeUWthem6TFfZ5y2nrD4');
+
 	const handleChange = (e) => {
 		setData({ ...data, [e.target.name]: e.target.value });
 	};
 
 	const sendEmail = async (e) => {
 		e.preventDefault();
-		const response = await fetch('/api/send', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(data),
-		});
-
-		if (response.status === 200) {
-			setData({});
-			setResponseMsg('Email successfully sent!');
-		} else {
-			setResponseMsg('Something went wrong.');
+		try {
+			const { dataEmail } = await resend.emails.send({
+				from: 'no-reply@nicopicotto.dev',
+				to: 'picottonico@gmail.com',
+				subject: 'New message from your website!',
+				react: EmailTemplate({
+					name: data.name,
+					email: data.email,
+					message: data.message,
+				}),
+			});
+			setResponseMsg('Message successfully sent!');
+			return new NextResponse(dataEmail);
+		} catch (error) {
+			setResponseMsg('Something went wrong');
+			return new NextResponse(error);
 		}
 	};
 

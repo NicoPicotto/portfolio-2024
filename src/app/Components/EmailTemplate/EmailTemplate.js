@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const EmailTemplate = ({ email, name, message }) => (
+export const EmailTemplate = ({ name, email, message }) => (
 	<div>
 		<h1>
 			New email from {name} - {email}
