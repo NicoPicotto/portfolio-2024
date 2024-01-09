@@ -86,3 +86,7 @@ textarea:focus {
 	outline: none;
 	background-color: var(--brand-1);
 }
+
+#shadow-host-companion {
+	padding: 0;
+}
