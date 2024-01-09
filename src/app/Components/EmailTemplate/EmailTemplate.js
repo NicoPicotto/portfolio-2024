@@ -1,0 +1,10 @@
+import * as React from 'react';
+
+export const EmailTemplate = ({ email, name, message }) => (
+	<div>
+		<h1>
+			New email from {name} - {email}
+		</h1>
+		<p>{message}</p>
+	</div>
+);

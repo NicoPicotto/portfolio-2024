@@ -19,17 +19,23 @@ const Card = ({ project }) => {
 					className='object-cover w-full overflow-hidden'
 				/>
 			</div>
-			<div className='flex flex-col p-4 gap-2 mb-1'>
+			<div className='flex flex-1 flex-col p-4 gap-2 mb-1'>
 				<h2>{project.name}</h2>
 				<p className='text-[var(--brand-3)]'>{project.content}</p>
 			</div>
-			<div className='flex-1 flex border-t-2 border-t-[var(--brand-2)]'>
-				<ButtonGhost className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)]'>
+			<div className='flex border-t-2 border-t-[var(--brand-2)]'>
+				<ButtonGhost
+					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)]'
+					href={project.githubLink}
+				>
 					<FaGithub color='var(--accent-1)' />
 					Code on Github
 				</ButtonGhost>
 				<div className='h-full border border-[var(--brand-2)]'></div>
-				<ButtonGhost className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)]'>
+				<ButtonGhost
+					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)]'
+					href={project.liveLink}
+				>
 					<BiDesktop color='var(--accent-1)' />
 					Live/Demo Version
 				</ButtonGhost>
