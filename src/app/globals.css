@@ -4,10 +4,10 @@
 
 :root {
 	--neutral: #f1f6f9;
-	--background: #122738;
+	--background: #0b1d2c;
 
-	--brand-1: #1c3e58;
-	--brand-2: #214867;
+	--brand-1: #17344a;
+	--brand-2: #132e43;
 	--brand-3: #b9b4c7;
 	--accent-1: #ffc600;
 	--accent-2: #d6a801;
@@ -18,10 +18,10 @@ body {
 	background-color: #122738;
 	opacity: 1;
 	background-image: radial-gradient(
-			#1c3e58 0.9500000000000001px,
+			#17344a 0.9500000000000001px,
 			transparent 0.9500000000000001px
 		),
-		radial-gradient(#1c3e58 0.9500000000000001px, #122738 0.9500000000000001px);
+		radial-gradient(#17344a 0.9500000000000001px, #0b1d2c 0.9500000000000001px);
 	background-size: 38px 38px;
 	background-position: 0 0, 19px 19px;
 }
@@ -73,7 +73,7 @@ section {
 input,
 textarea {
 	border-radius: 4px;
-	padding-inline: 8px;
+	padding-inline: 10px;
 	padding-block: 6px;
 	font-size: large;
 	margin-bottom: 20px;
