@@ -9,7 +9,7 @@ const ButtonLink = ({ children, targetId }) => {
 	return (
 		<button
 			onClick={scrollToTarget}
-			className='flex items-center text-brand-3 hover:underline'
+			className='flex items-center text-brand-3 hover:underline text-nowrap'
 		>
 			{children}
 		</button>

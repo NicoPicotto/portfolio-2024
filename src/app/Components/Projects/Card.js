@@ -9,7 +9,6 @@ const Card = ({ project }) => {
 			key={project.name}
 			className='flex flex-col border-2 border-[var(--brand-1)] rounded-lg overflow-hidden'
 		>
-			{!project && <h1>NADA</h1>}
 			<div>
 				<Image
 					src={project.img}
@@ -23,21 +22,31 @@ const Card = ({ project }) => {
 				<h2>{project.name}</h2>
 				<p className='text-[var(--brand-3)]'>{project.content}</p>
 			</div>
+			<div className='flex items-center mb-3 px-4 space-x-4'>
+				{project.stack?.map((item) => (
+					<span
+						key={item.index}
+						className='bg-[var(--brand-1)] p-1 text-xs py-1 px-2 rounded'
+					>
+						{item}
+					</span>
+				))}
+			</div>
 			<div className='flex border-t-2 border-t-[var(--brand-2)]'>
 				<ButtonGhost
-					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)]'
-					href={project.githubLink}
-				>
-					<FaGithub color='var(--accent-1)' />
-					Code on Github
-				</ButtonGhost>
-				<div className='h-full border border-[var(--brand-2)]'></div>
-				<ButtonGhost
-					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)]'
+					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)] text-sm md:text-md'
 					href={project.liveLink}
 				>
 					<BiDesktop color='var(--accent-1)' />
 					Live/Demo Version
+				</ButtonGhost>
+				<div className='h-full border border-[var(--brand-2)]'></div>
+				<ButtonGhost
+					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)] text-sm md:text-md'
+					href={project.githubLink}
+				>
+					<FaGithub color='var(--accent-1)' />
+					Code on Github
 				</ButtonGhost>
 			</div>
 		</div>

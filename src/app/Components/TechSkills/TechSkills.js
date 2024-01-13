@@ -14,14 +14,14 @@ import { BsWordpress } from 'react-icons/bs';
 
 const TechSkills = () => {
 	return (
-		<section id="skills">
+		<section id='skills'>
 			<div className='flex-1 divide-y divide-[var(--brand-2)] space-y-2'>
-				<h1>
+				<h1 className='leading-tight'>
 					The <span className='text-[var(--accent-1)]'>technologies</span> I
 					work with
 				</h1>
-				<ul className='grid grid-cols-4 gap-4 list-none space-y-4 pt-3'>
-					<li>
+				<ul className='grid grid-cols-2 md:grid-cols-4 gap-4 list-none md:space-y-4 space-y-2 pt-3'>
+					<li className="mt-2">
 						<SiHtml5 className='mr-2' /> HTML
 					</li>
 					<li>

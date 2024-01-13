@@ -1,28 +1,67 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import ButtonLink from '../Buttons/ButtonLink';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
-		<header className='flex justify-center sticky top-0 bg-[var(--background)] z-10'>
-			<div className='max-w-screen-xl flex justify-between w-full py-8 px-6'>
-				<ButtonLink targetId='hero'>
-					{' '}
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						viewBox='0 0 24 24'
-						fill='currentColor'
-						className='w-4 h-4 mr-2'
-					>
-						<path
-							fillRule='evenodd'
-							d='M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z'
-							clipRule='evenodd'
-						/>
-					</svg>
-					Nico Picotto
-				</ButtonLink>
-				<div className='flex space-x-8 items-center'>
+		<header
+			className={`${
+				isOpen
+					? 'bg-[var(--brand-2)] relative'
+					: 'bg-[var(--background)] relative'
+			} flex justify-center sticky top-0 z-10`}
+		>
+			<div className='flex flex-col max-w-screen-lg md:flex-row justify-between w-full md:py-8 md:px-auto py-6 px-6'>
+				<div className='flex justify-between md:w-fit w-full'>
+					<ButtonLink targetId='hero'>
+						{' '}
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							viewBox='0 0 24 24'
+							fill='currentColor'
+							className='w-4 h-4 mr-2'
+						>
+							<path
+								fillRule='evenodd'
+								d='M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z'
+								clipRule='evenodd'
+							/>
+						</svg>
+						Nico Picotto
+					</ButtonLink>
+					<div className='flex md:hidden'>
+						<button
+							onClick={() => setIsOpen(!isOpen)}
+							className='md:hidden'
+							aria-expanded={isOpen}
+						>
+							<svg className='w-6 h-6' viewBox='0 0 20 20' fill='currentColor'>
+								{isOpen ? (
+									<path
+										fillRule='evenodd'
+										d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z'
+										clipRule='evenodd'
+									/>
+								) : (
+									<path
+										fillRule='evenodd'
+										d='M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z'
+										clipRule='evenodd'
+									/>
+								)}
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<div
+					className={`${
+						isOpen ? 'flex' : 'hidden'
+					}  md:static absolute top-full left-0 right-0 md:bg-transparent bg-[var(--brand-2)] px-6 md:pb-0 pb-6 flex-col md:flex md:flex-row md:items-center md:justify-end md:w-full md:space-x-8 md:space-y-0 space-y-5 md:p-0 z-20`}
+				>
 					<ButtonLink targetId='skills'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -68,7 +107,7 @@ const Navbar = () => {
 						</svg>
 						Contact
 					</ButtonLink>
-					<div className='h-full border border-[var(--brand-2)]'></div>
+					<div className='h-full border border-[var(--brand-1)] md:border-[var(--brand-2)]'></div>
 					<div className='flex gap-4'>
 						<a href='https://github.com/NicoPicotto' target='_blank'>
 							<FaGithub />

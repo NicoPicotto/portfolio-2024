@@ -15,15 +15,9 @@
 
 body {
 	color: var(--neutral);
-	background-color: #122738;
-	opacity: 1;
-	background-image: radial-gradient(
-			#17344a 0.9500000000000001px,
-			transparent 0.9500000000000001px
-		),
-		radial-gradient(#17344a 0.9500000000000001px, #0b1d2c 0.9500000000000001px);
-	background-size: 38px 38px;
-	background-position: 0 0, 19px 19px;
+	background-image: url('/img/bg.svg');
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 h1 {
@@ -67,7 +61,7 @@ section {
 	margin-right: auto;
 	max-width: 1024px;
 	align-items: center;
-	padding-block: 10em;
+	padding-block: 12em;
 }
 
 input,
