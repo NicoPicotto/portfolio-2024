@@ -12,9 +12,8 @@ const Hero = () => {
 				</h1>
 				<p className='text-[var(--neutral)] mb-7'>
 					Web developer, graphic designer and passionate about creating
-					<span className='font-bold'> powerful</span>,{' '}
-					<span className='font-bold'> smooth</span> and{' '}
-					<span className='font-bold'> practical</span> web and mobile products.
+					<span className='font-bold'> awesome</span> and{' '}
+					<span className='font-bold'> smooth</span> web and mobile products.
 				</p>
 				<div className='flex space-x-4'>
 					<ButtonSolid>Learn more</ButtonSolid>
@@ -28,7 +27,7 @@ const Hero = () => {
 				width='350'
 				height='350'
 				priority
-				className='hidden md:block grayscale hover:grayscale-0 transition-all outline outline-2 outline-[var(--accent-2)] hover:outline-offset-8 rounded-full'
+				className='hidden md:block grayscale hover:grayscale-0 transition-all outline outline-2 outline-transparent hover:outline-[var(--accent-2)] hover:outline-offset-8 rounded-full'
 			/>
 		</section>
 	);

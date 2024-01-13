@@ -35,9 +35,9 @@ const Contact = () => {
 	};
 
 	return (
-		<section id='contact' className='pb-20 mb-20'>
+		<section id='contact'>
 			<div className='flex-1 divide-y divide-[var(--brand-2)] space-y-2'>
-				<h1 className="leading-tight">
+				<h1 className='leading-tight'>
 					Get in <span className='text-[var(--accent-1)]'>touch</span>.
 				</h1>
 				<form onSubmit={sendEmail} className='flex flex-col pt-3 w-full'>
