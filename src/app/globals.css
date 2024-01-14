@@ -69,7 +69,6 @@ textarea {
 	border-radius: 4px;
 	padding-inline: 10px;
 	padding-block: 6px;
-	font-size: large;
 	margin-bottom: 20px;
 	background-color: var(--brand-1);
 	transition: ease;
@@ -84,3 +83,4 @@ textarea:focus {
 #shadow-host-companion {
 	padding: 0;
 }
+

@@ -19,14 +19,6 @@ const Projects = () => {
 							return <Card key={key} project={project} />;
 						})}
 				</div>
-				<div className='pt-3 grid grid-co1 md:grid-cols-2 gap-3'>
-					{!projects && (
-						<>
-							<div className='min-h-[600px] bg-[var(--brand-1)] animate-pulse rounded-lg'></div>
-							<div className='min-h-[600px] bg-[var(--brand-1)] animate-pulse rounded-lg'></div>
-						</>
-					)}
-				</div>
 			</div>
 		</section>
 	);

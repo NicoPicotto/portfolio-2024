@@ -4,7 +4,10 @@ import ButtonSolid from '../Buttons/ButtonSolid';
 
 const Hero = () => {
 	return (
-		<section className='justify-between' id='hero'>
+		<section
+			className='justify-between items-start flex flex-col-reverse md:flex-row md:items-center gap-6 md:gap-0'
+			id='hero'
+		>
 			<div className='flex-1 max-w-xl'>
 				<h1 className='mb-3 leading-tight'>
 					Hey there!{' '}
@@ -16,8 +19,8 @@ const Hero = () => {
 					<span className='font-bold'> smooth</span> web and mobile products.
 				</p>
 				<div className='flex space-x-4'>
-					<ButtonSolid>Learn more</ButtonSolid>
-					<ButtonOutline>Work with me</ButtonOutline>
+					<ButtonSolid targetId='projects'>Learn more</ButtonSolid>
+					<ButtonOutline targetId='contact'>Work with me</ButtonOutline>
 				</div>
 			</div>
 
@@ -27,7 +30,7 @@ const Hero = () => {
 				width='350'
 				height='350'
 				priority
-				className='hidden md:block grayscale hover:grayscale-0 transition-all outline outline-2 outline-transparent hover:outline-[var(--accent-2)] hover:outline-offset-8 rounded-full'
+				className='w-2/4 md:w-auto grayscale hover:grayscale-0 transition-all outline outline-2 outline-transparent hover:outline-[var(--accent-2)] hover:outline-offset-8 rounded-full'
 			/>
 		</section>
 	);

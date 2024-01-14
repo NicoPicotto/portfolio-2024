@@ -22,7 +22,7 @@ const Card = ({ project }) => {
 				<h2>{project.name}</h2>
 				<p className='text-[var(--brand-3)]'>{project.content}</p>
 			</div>
-			<div className='flex items-center mb-3 px-4 space-x-4'>
+			<div className='flex items-center mb-4 px-4 space-x-4'>
 				{project.stack?.map((item) => (
 					<span
 						key={item.index}

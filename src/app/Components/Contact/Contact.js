@@ -49,6 +49,7 @@ const Contact = () => {
 								name='name'
 								placeholder='John Doe'
 								value={data.name}
+								className="text-md md:text-lg"
 								onChange={handleChange}
 							/>
 						</div>
@@ -58,6 +59,7 @@ const Contact = () => {
 								value={data.email}
 								onChange={handleChange}
 								required
+								className="text-md md:text-lg"
 								name='email'
 								type='email'
 								placeholder='jdoe@gmail.com'
@@ -69,6 +71,7 @@ const Contact = () => {
 						<textarea
 							required
 							name='message'
+							className="text-md md:text-lg"
 							value={data.message}
 							onChange={handleChange}
 							placeholder='I would like to talk about my new website ideas!'
