@@ -35,6 +35,7 @@ const Card = ({ project }) => {
 			<div className='flex border-t-2 border-t-[var(--brand-2)]'>
 				<ButtonGhost
 					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)] text-sm md:text-md'
+					name="See the live version"
 					href={project.liveLink}
 				>
 					<BiDesktop color='var(--accent-1)' />
@@ -43,6 +44,7 @@ const Card = ({ project }) => {
 				<div className='h-full border border-[var(--brand-2)]'></div>
 				<ButtonGhost
 					className='flex items-center gap-2 w-full justify-center rounded-none text-[var(--brand-3)] text-sm md:text-md'
+					name="See the code on Github"
 					href={project.githubLink}
 				>
 					<FaGithub color='var(--accent-1)' />

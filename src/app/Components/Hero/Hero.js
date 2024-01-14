@@ -19,8 +19,8 @@ const Hero = () => {
 					<span className='font-bold'> smooth</span> web and mobile products.
 				</p>
 				<div className='flex space-x-4'>
-					<ButtonSolid targetId='projects'>Learn more</ButtonSolid>
-					<ButtonOutline targetId='contact'>Work with me</ButtonOutline>
+					<ButtonSolid name="Learn More" targetId='projects'>Learn more</ButtonSolid>
+					<ButtonOutline name="Work with me" targetId='contact'>Work with me</ButtonOutline>
 				</div>
 			</div>
 

@@ -36,7 +36,7 @@ const Navbar = () => {
 						<button
 							onClick={() => setIsOpen(!isOpen)}
 							className='md:hidden'
-							name='hamburguer menu'
+							aria-label='hamburguer menu'
 							aria-expanded={isOpen}
 						>
 							<svg className='w-6 h-6' viewBox='0 0 20 20' fill='currentColor'>
