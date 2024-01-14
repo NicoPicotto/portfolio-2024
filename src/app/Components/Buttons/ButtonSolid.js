@@ -9,7 +9,7 @@ const ButtonSolid = ({ children, targetId, name }) => {
 	return (
 		<button
 			onClick={scrollToTarget}
-			name={name}
+			aria-label={name}
 			className='bg-[var(--brand-1)] hover:bg-[var(--brand-2)] px-4 py-2 rounded transition-colors'
 		>
 			{children}

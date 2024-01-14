@@ -15,7 +15,7 @@ const ButtonGhost = ({ children, onClick, href, className, name }) => {
 	return (
 		<button
 			onClick={onClick}
-			name={name}
+			aria-label={name}
 			className={`text-[var(--neutral)] px-2 py-2 rounded hover:bg-[var(--brand-1)] transition-all ${className}`}
 		>
 			{children}
