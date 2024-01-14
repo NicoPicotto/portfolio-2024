@@ -12,7 +12,7 @@ const Card = ({ project }) => {
 			<div>
 				<Image
 					src={project.img}
-					alt='Descripción de la imagen'
+					alt={project.content}
 					width='350'
 					height='350'
 					className='object-cover w-full overflow-hidden'
@@ -22,7 +22,7 @@ const Card = ({ project }) => {
 				<h2>{project.name}</h2>
 				<p className='text-[var(--brand-3)]'>{project.content}</p>
 			</div>
-			<div className='flex items-center mb-4 px-4 space-x-4'>
+			<div className='flex items-center mb-4 px-4 space-x-2'>
 				{project.stack?.map((item) => (
 					<span
 						key={item.index}

@@ -25,6 +25,7 @@ export default function Home() {
 			<TechSkills />
 			<Projects />
 			<Contact />
+			<Footer />
 		</main>
 	);
 }

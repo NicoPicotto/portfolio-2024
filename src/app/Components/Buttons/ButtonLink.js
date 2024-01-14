@@ -1,5 +1,5 @@
 'use client';
-const ButtonLink = ({ children, targetId }) => {
+const ButtonLink = ({ children, targetId, name }) => {
 	const scrollToTarget = () => {
 		const target = document.getElementById(targetId);
 		if (target) {
@@ -9,6 +9,7 @@ const ButtonLink = ({ children, targetId }) => {
 	return (
 		<button
 			onClick={scrollToTarget}
+			name={name}
 			className='flex items-center text-brand-3 hover:underline text-nowrap'
 		>
 			{children}

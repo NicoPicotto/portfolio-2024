@@ -11,12 +11,12 @@ const Navbar = () => {
 			className={`${
 				isOpen
 					? 'bg-[var(--brand-2)] relative'
-					: 'bg-[var(--background)] relative'
-			} flex justify-center sticky top-0 z-10`}
+					: 'bg-[#0b1d2c] bg-opacity-50 backdrop-blur-sm relative'
+			} flex justify-center sticky top-0 z-10 px-6`}
 		>
-			<div className='flex flex-col max-w-screen-lg md:flex-row justify-between w-full md:py-8 md:px-auto py-6 px-6'>
+			<div className='flex flex-col max-w-screen-lg md:flex-row justify-between w-full py-6'>
 				<div className='flex justify-between md:w-fit w-full'>
-					<ButtonLink targetId='hero'>
+					<ButtonLink targetId='hero' name='about me'>
 						{' '}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -36,6 +36,7 @@ const Navbar = () => {
 						<button
 							onClick={() => setIsOpen(!isOpen)}
 							className='md:hidden'
+							name='hamburguer menu'
 							aria-expanded={isOpen}
 						>
 							<svg className='w-6 h-6' viewBox='0 0 20 20' fill='currentColor'>
@@ -62,7 +63,7 @@ const Navbar = () => {
 						isOpen ? 'flex' : 'hidden'
 					}  md:static absolute top-full left-0 right-0 md:bg-transparent bg-[var(--brand-2)] px-6 md:pb-0 pb-6 flex-col md:flex md:flex-row md:items-center md:justify-end md:w-full md:space-x-8 md:space-y-0 space-y-5 md:p-0 z-20`}
 				>
-					<ButtonLink targetId='skills'>
+					<ButtonLink targetId='skills' name='tech skills'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
@@ -83,7 +84,7 @@ const Navbar = () => {
 						</svg>
 						Tech Skills
 					</ButtonLink>
-					<ButtonLink targetId='projects'>
+					<ButtonLink targetId='projects' name='projects'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
@@ -94,7 +95,7 @@ const Navbar = () => {
 						</svg>
 						Projects
 					</ButtonLink>
-					<ButtonLink targetId='contact'>
+					<ButtonLink targetId='contact' name='contact'>
 						{' '}
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -107,7 +108,7 @@ const Navbar = () => {
 						</svg>
 						Contact
 					</ButtonLink>
-					<div className='h-full border border-[var(--brand-1)] md:border-[var(--brand-2)]'></div>
+					<div className='h-full border border-[var(--brand-1)] md:border-[var(--neutral)] md:opacity-30'></div>
 					<div className='flex gap-4'>
 						<a href='https://github.com/NicoPicotto' target='_blank'>
 							<FaGithub />

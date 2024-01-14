@@ -1,5 +1,5 @@
 // components/ButtonSolid.js
-const ButtonSolid = ({ children, targetId }) => {
+const ButtonSolid = ({ children, targetId, name }) => {
 	const scrollToTarget = () => {
 		const target = document.getElementById(targetId);
 		if (target) {
@@ -9,6 +9,7 @@ const ButtonSolid = ({ children, targetId }) => {
 	return (
 		<button
 			onClick={scrollToTarget}
+			name={name}
 			className='bg-[var(--brand-1)] hover:bg-[var(--brand-2)] px-4 py-2 rounded transition-colors'
 		>
 			{children}

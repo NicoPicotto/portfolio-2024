@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
 			<body className={exo.className}>
 				<Navbar />
 				<div className='mx-auto max-w-screen-xl px-6 '>{children}</div>
-				<Footer />
 			</body>
 		</html>
 	);

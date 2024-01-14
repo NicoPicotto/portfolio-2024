@@ -1,8 +1,8 @@
 import { TbBrandNextjs } from 'react-icons/tb';
 const Footer = () => {
 	return (
-		<footer className='position-relative bottom-0 flex h-fit flex justify-center'>
-			<div className='max-w-screen-xl flex justify-center w-full py-5 px-6 text-sm'>
+		<footer className='h-fit flex justify-center py-5 px-6'>
+			<div className='max-w-screen-xl flex justify-center w-full  text-sm'>
 				<div className='flex gap-2 items-center'>
 					Made with{' '}
 					<svg

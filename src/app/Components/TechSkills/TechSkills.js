@@ -16,7 +16,7 @@ const TechSkills = () => {
 	return (
 		<section id='skills'>
 			<div className='flex-1 divide-y divide-[var(--brand-2)] space-y-2'>
-				<h1 className='leading-tight'>
+				<h1 className='leading-tight text-balance'>
 					The <span className='text-[var(--accent-1)]'>technologies</span> I
 					work with
 				</h1>

@@ -1,4 +1,4 @@
-const ButtonGhost = ({ children, onClick, href, className }) => {
+const ButtonGhost = ({ children, onClick, href, className, name }) => {
 
 	if (href) {
 		return (
@@ -15,6 +15,7 @@ const ButtonGhost = ({ children, onClick, href, className }) => {
 	return (
 		<button
 			onClick={onClick}
+			name={name}
 			className={`text-[var(--neutral)] px-2 py-2 rounded hover:bg-[var(--brand-1)] transition-all ${className}`}
 		>
 			{children}
